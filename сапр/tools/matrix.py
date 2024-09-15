@@ -59,6 +59,7 @@ class Matrix:
             value.append(other[index])
         return self.__class__(self.data)
 
+    @property
     def shape(self) -> tuple:
         return len(self.data), len(self.data[0])
 
