@@ -14,7 +14,7 @@ class Matrix:
         self.data = copy.deepcopy(data)
 
     def __add__(self, other: 'Matrix') -> 'Matrix':
-        if self.shape() != other.shape():
+        if self.shape != other.shape:
             raise ValueError("Матрицы должны быть одинакового размера для сложения")
 
         result = [[self.data[i][j] + other.data[i][j] for j in range(len(self.data[0]))]
