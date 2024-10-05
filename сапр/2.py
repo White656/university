@@ -24,7 +24,7 @@ def gauss_method(matrix: Matrix) -> Matrix:
     return solution
 
 
-tasks = json.load(open('2.json', 'r', encoding='utf-8'))
+tasks = json.load(open('answers/2.json', 'r', encoding='utf-8'))
 
 number = input('Введите вариант задания: ')
 
