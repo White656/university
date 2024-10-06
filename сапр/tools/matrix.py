@@ -22,7 +22,7 @@ class Matrix:
         return self.__class__(result)
 
     def __sub__(self, other: 'Matrix') -> 'Matrix':
-        if self.shape() != other.shape():
+        if self.shape != other.shape:
             raise ValueError("Матрицы должны быть одинакового размера для вычитания")
 
         result = [[self.data[i][j] - other.data[i][j] for j in range(len(self.data[0]))]
