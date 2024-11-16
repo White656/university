@@ -9,8 +9,8 @@ import tkinter as tk
 # Параметры подключения к PostgreSQL
 conn_params = {
     'dbname': 'company_data',
-    'user': 'your_username',
-    'password': 'your_password',
+    'user': 'postgres',
+    'password': 'postgres',
     'host': 'localhost',
     'port': '5432'
 }
