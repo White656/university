@@ -15,14 +15,17 @@ name_regex = re.compile(r'^[A-Za-z\s]+$')
 phone_regex = re.compile(r'^\+?\d{10,15}$')
 city_regex = re.compile(r'^[A-Za-z\s]+$')
 
+
 # Функция для генерации случайного пароля
 def generate_password(length=10):
     chars = string.ascii_letters + string.digits + string.punctuation
     return ''.join(random.choice(chars) for _ in range(length))
 
+
 # Функция для генерации почтового адреса
 def generate_email(name):
     return name.lower().replace(" ", ".") + "@company.com"
+
 
 # Функция для очистки некорректных данных
 def clear_invalid_data():
@@ -53,6 +56,7 @@ def clear_invalid_data():
 
     messagebox.showinfo("Готово", "Некорректные данные удалены и записаны в отдельный файл.")
 
+
 # Функция для формирования почтовых адресов
 def generate_emails():
     data = []
@@ -72,6 +76,7 @@ def generate_emails():
 
     messagebox.showinfo("Готово", "Почтовые адреса успешно добавлены.")
 
+
 # Функция для генерации паролей
 def generate_passwords():
     data = []
@@ -90,6 +95,7 @@ def generate_passwords():
         writer.writerows(data)
 
     messagebox.showinfo("Готово", "Пароли успешно сгенерированы.")
+
 
 # Создание интерфейса tkinter
 root = tk.Tk()
