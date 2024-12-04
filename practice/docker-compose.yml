@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: testops_postgres
+    environment:
+      POSTGRES_USER: allure
+      POSTGRES_PASSWORD: Evq2i4H0|96i
+      POSTGRES_DB: allure
+    ports:
+      - "127.0.0.1:5437:5432"
+    volumes:
+      - allure_db_data:/var/lib/postgresql/data
+    networks:
+      - pg_net
+
+volumes:
+  allure_db_data:
+
+networks:
+  pg_net:
